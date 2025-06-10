@@ -47,7 +47,7 @@ query_embedding = get_embedding(query)
 results = collection.query(query_embeddings=[query_embedding], n_results=2)
 
 context = "\n".join(results['documents'][0])
-rag_prompt = f"""Gebruik de volgende context om de vraag te beantwoorden:
+rag_prompt = f"""Gebruik alleen de volgende context om de vraag te beantwoorden:
 
 {context}
 
